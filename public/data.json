@@ -1,8 +1,8 @@
 [
   {
-    "id": "d1",
+    "id": "1",
     "name": "Dr. Mahbub Rahman",
-    "image": "/images/doctors/doctor1.jpg",
+    "image": "https://url-shortener.me/3690",
     "education": "MBBS, FCPS (Cardiology)",
     "speciality": "Cardiologist",
     "experience": "12 Years",
@@ -13,9 +13,9 @@
     "availability": ["Sunday", "Tuesday", "Thursday"]
   },
   {
-    "id": "d2",
+    "id": "2",
     "name": "Dr. Nusrat Jahan",
-    "image": "/images/doctors/doctor2.jpg",
+    "image": "https://scontent-bos5-1.xx.fbcdn.net/o1/v/t0/f2/m340/AQMgS-hqUKhct9dPzaUir9acthjVIf5-Z01wyYkrKVivij7ej2Uj9EwJHymLmMMBfQY3dmqMGNldcLxQ67OgacMy6mW4rDKvKX-1mBnrQRygvglJUziZ_UbaJwgqlP472JPgQ8u7lyMClkjR5iEONwi4p1kJsw.jpeg?_nc_ht=scontent-bos5-1.xx.fbcdn.net&_nc_gid=ecPcFX9hJPKRqIB8nq3qeQ&_nc_cat=105&_nc_oc=AdmnjCiH36kdEv6br3Wm905okUsqlULKUKB_ilz-f8jU6B8kKb4IdtU5m04RmhabZts&ccb=9-4&oh=00_AfkD0dF5pVarhn2R31XMjDZdX1RNhDT7k5jOX74MjdsBPg&oe=693F1FCC&_nc_sid=5b3566",
     "education": "MBBS, MS (Gynecology)",
     "speciality": "Gynecologist",
     "experience": "9 Years",
@@ -26,9 +26,9 @@
     "availability": ["Monday", "Wednesday"]
   },
   {
-    "id": "d3",
+    "id": "3",
     "name": "Dr. Arif Hossain",
-    "image": "/images/doctors/doctor3.jpg",
+    "image": "https://url-shortener.me/37X5",
     "education": "MBBS, MD (Medicine)",
     "speciality": "Medicine Specialist",
     "experience": "10 Years",
@@ -39,9 +39,9 @@
     "availability": ["Sunday", "Monday", "Wednesday"]
   },
   {
-    "id": "d4",
+    "id": "4",
     "name": "Dr. Tanvir Ahmed",
-    "image": "/images/doctors/doctor4.jpg",
+    "image": "https://url-shortener.me/37XE",
     "education": "MBBS, MS (Orthopedics)",
     "speciality": "Orthopedic Surgeon",
     "experience": "15 Years",
@@ -52,9 +52,9 @@
     "availability": ["Tuesday", "Thursday"]
   },
   {
-    "id": "d5",
+    "id": "5",
     "name": "Dr. Farzana Islam",
-    "image": "/images/doctors/doctor5.jpg",
+    "image": "https://url-shortener.me/37XL",
     "education": "MBBS, FCPS (Dermatology)",
     "speciality": "Dermatologist",
     "experience": "8 Years",
@@ -65,9 +65,9 @@
     "availability": ["Sunday", "Thursday"]
   },
   {
-    "id": "d6",
+    "id": "6",
     "name": "Dr. Imran Khan",
-    "image": "/images/doctors/doctor6.jpg",
+    "image": "https://url-shortener.me/37XZ",
     "education": "MBBS, MD (Neurology)",
     "speciality": "Neurologist",
     "experience": "11 Years",
@@ -78,9 +78,9 @@
     "availability": ["Monday", "Wednesday", "Saturday"]
   },
   {
-    "id": "d7",
+    "id": "7",
     "name": "Dr. Shafiul Alam",
-    "image": "/images/doctors/doctor7.jpg",
+    "image": "https://url-shortener.me/37Y4",
     "education": "MBBS, FCPS (Pediatrics)",
     "speciality": "Child Specialist",
     "experience": "14 Years",
@@ -91,9 +91,9 @@
     "availability": ["Sunday", "Tuesday"]
   },
   {
-    "id": "d8",
+    "id": "8",
     "name": "Dr. Rashed Mahmud",
-    "image": "/images/doctors/doctor8.jpg",
+    "image": "https://url-shortener.me/37YE",
     "education": "MBBS, MD (Gastroenterology)",
     "speciality": "Gastroenterologist",
     "experience": "13 Years",
@@ -104,9 +104,9 @@
     "availability": ["Monday", "Thursday"]
   },
   {
-    "id": "d9",
+    "id": "9",
     "name": "Dr. Sultana Akter",
-    "image": "/images/doctors/doctor9.jpg",
+    "image": "https://url-shortener.me/37YR",
     "education": "MBBS, FCPS (Psychiatry)",
     "speciality": "Psychiatrist",
     "experience": "7 Years",
@@ -117,9 +117,9 @@
     "availability": ["Wednesday", "Saturday"]
   },
   {
-    "id": "d10",
+    "id": "10",
     "name": "Dr. Hasanuzzaman",
-    "image": "/images/doctors/doctor10.jpg",
+    "image": "https://url-shortener.me/37YY",
     "education": "MBBS, MS (ENT)",
     "speciality": "ENT Specialist",
     "experience": "10 Years",
@@ -130,9 +130,9 @@
     "availability": ["Sunday", "Tuesday"]
   },
   {
-    "id": "d11",
+    "id": "11",
     "name": "Dr. Nazmul Haque",
-    "image": "/images/doctors/doctor11.jpg",
+    "image": "https://url-shortener.me/37Z4",
     "education": "MBBS, FCPS (Urology)",
     "speciality": "Urologist",
     "experience": "16 Years",
@@ -143,9 +143,9 @@
     "availability": ["Monday", "Thursday"]
   },
   {
-    "id": "d12",
+    "id": "12",
     "name": "Dr. Tania Chowdhury",
-    "image": "/images/doctors/doctor12.jpg",
+    "image": "https://url-shortener.me/37ZC",
     "education": "MBBS, MS (Ophthalmology)",
     "speciality": "Eye Specialist",
     "experience": "6 Years",
