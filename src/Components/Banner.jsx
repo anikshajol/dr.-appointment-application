@@ -3,8 +3,8 @@ import banner from "../assets/banner-img-1.png";
 import banner2 from "../assets/banner-img-1.png";
 const Banner = () => {
   return (
-    <section className="dark:bg-gray-100 px-6 mt-3 pb-6 dark:text-gray-800 ">
-      <div className="container bg-linear-to-t from-[#ffffffce] to-[#EFEFEF] mx-auto flex flex-col border shadow-md border-white rounded-3xl items-center px-4 py-16 text-center md:py-32 md:px-10 lg:px-32">
+    <section className="dark:bg-black px-6 mt-3 pb-6 dark:text-gray-800 ">
+      <div className="container bg-linear-to-t from-white via-base-200 to-base-200 mx-auto flex flex-col border-2 shadow-sm  border-white rounded-3xl items-center px-4 py-16 text-center md:py-32 md:px-10 lg:px-32">
         <h1 className="text-4xl font-bold leading-none sm:text-5xl">
           Dependable Care, Backed by Trusted Professionals.
         </h1>
@@ -25,10 +25,18 @@ const Banner = () => {
           <a className="btn btn-primary rounded-3xl">Search Now</a>
         </div>
         {/* banner image */}
-        <section className="flex gap-4 flex-col md:flex-row justify-center">
-          <img src={banner} alt="Doctors image" />
+        <section className="flex gap-4 flex-col lg:flex-row justify-center">
+          <img
+            src={banner}
+            className="max-w-96 w-full lg:max-w-125"
+            alt="Doctors image"
+          />
 
-          <img src={banner2} alt="Doctors image" />
+          <img
+            src={banner2}
+            className="max-w-96 w-full lg:max-w-125"
+            alt="Doctors image"
+          />
         </section>
       </div>
     </section>

@@ -1,8 +1,13 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { IoMdMenu } from "react-icons/io";
 import { Link, NavLink } from "react-router";
 import logo from "/logo.png";
+import { FaToggleOff, FaToggleOn } from "react-icons/fa6";
+
 const Nav = () => {
+  const [theme, setTheme] = useState(
+    () => localStorage.getItem("theme") || "light"
+  );
   const nav = (
     <>
       <li>
@@ -19,6 +24,17 @@ const Nav = () => {
       </li>
     </>
   );
+
+  const handleAddToTheme = () => {
+    setTheme((prev) => (prev === "light" ? "synthwave" : "light"));
+  };
+  useEffect(() => {
+    localStorage.setItem("theme", theme);
+    document.querySelector("html").setAttribute("data-theme", theme);
+  }, [theme]);
+
+  console.log(theme);
+
   return (
     <div className="navbar md:px-24">
       <div className="navbar-start">
@@ -45,6 +61,13 @@ const Nav = () => {
       </div>
       <div className="navbar-end">
         <a className="btn btn-primary rounded-3xl">Emergency</a>
+        <div onClick={handleAddToTheme} className="cursor-pointer ml-4">
+          {theme === "synthwave" ? (
+            <FaToggleOn size={34} />
+          ) : (
+            <FaToggleOff size={34} />
+          )}
+        </div>
       </div>
     </div>
   );
