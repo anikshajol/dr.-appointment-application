@@ -1,23 +1,11 @@
 import React from "react";
-import drImage from "../assets/doctor-sample.png";
 import { RiRegisteredLine } from "react-icons/ri";
 import { Link } from "react-router";
 
 const Doctor = ({ doctor }) => {
   console.log(doctor);
-  const {
-    id,
-    name,
-    image,
-    education,
-    speciality,
-    experience,
-    registration,
-    designation,
-    workplace,
-    fee,
-    availability,
-  } = doctor;
+  const { id, name, image, education, experience, registration, availability } =
+    doctor;
 
   return (
     <div

@@ -28,4 +28,12 @@ const addToLocalStorage = (id) => {
   }
 };
 
-export { getFromLocalStorage, addToLocalStorage };
+const deleteFromLocalStorage = (id) => {
+  const storedItems = getFromLocalStorage();
+
+  const remaining = storedItems.filter((item) => item !== id);
+  saveToLocalStorage(remaining);
+  toast.error("Booking Cancel.");
+};
+
+export { getFromLocalStorage, addToLocalStorage, deleteFromLocalStorage };
