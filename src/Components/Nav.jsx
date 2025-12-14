@@ -11,16 +11,44 @@ const Nav = () => {
   const nav = (
     <>
       <li>
-        <NavLink to={"/"}>Home</NavLink>
+        <NavLink
+          to={"/"}
+          className={({ isActive }) =>
+            isActive ? "md:border-b-2 md:rounded-b-none md:border-black" : ""
+          }
+        >
+          Home
+        </NavLink>
       </li>
       <li>
-        <NavLink to={"bookings"}>My Bookings</NavLink>
+        <NavLink
+          className={({ isActive }) =>
+            isActive ? "md:border-b-2 md:rounded-b-none md:border-black" : ""
+          }
+          to={"bookings"}
+        >
+          My Bookings
+        </NavLink>
       </li>
       <li>
-        <NavLink to={"blogs"}>Blogs</NavLink>
+        <NavLink
+          className={({ isActive }) =>
+            isActive ? "md:border-b-2 rounded-b-none border-black" : ""
+          }
+          to={"blogs"}
+        >
+          Blogs
+        </NavLink>
       </li>
       <li>
-        <NavLink to={"contact-us"}>Contact Us</NavLink>
+        <NavLink
+          className={({ isActive }) =>
+            isActive ? "md:border-b-2 rounded-b-none border-black" : ""
+          }
+          to={"contact-us"}
+        >
+          Contact Us
+        </NavLink>
       </li>
     </>
   );
