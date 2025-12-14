@@ -37,7 +37,7 @@ const DoctorsDetails = () => {
   const handleBookingAppointment = (id) => {
     const isNewBooking = addToLocalStorage(id);
     if (isNewBooking) {
-      navigate("bookings");
+      navigate("/bookings");
     }
   };
 

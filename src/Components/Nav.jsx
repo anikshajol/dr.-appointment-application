@@ -25,7 +25,7 @@ const Nav = () => {
           className={({ isActive }) =>
             isActive ? "md:border-b-2 md:rounded-b-none md:border-black" : ""
           }
-          to={"bookings"}
+          to={"/bookings"}
         >
           My Bookings
         </NavLink>
