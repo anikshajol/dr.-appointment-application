@@ -13,8 +13,8 @@ const Doctors = ({ doctors }) => {
   };
 
   return (
-    <div>
-      <div className="container bg-linear-to-t mx-auto flex flex-col items-center px-4 py-12 md:py-2 text-center md:pt-16 md:px-10 lg:px-32">
+    <>
+      <div className="container  mx-auto flex flex-col items-center px-4 py-12 md:py-2 text-center md:pt-16 md:px-10 lg:px-32">
         <h1 className="text-4xl font-bold leading-none sm:text-5xl">
           Our Best Doctors
         </h1>
@@ -31,20 +31,18 @@ const Doctors = ({ doctors }) => {
           <Doctor key={doctor.id} doctor={doctor} />
         ))}
       </div>
-      {visibleCount < doctors.length ? (
-        <div className="flex justify-center mt-4">
-          <button onClick={handleLoadMore} className="btn btn-primary">
+      <div className="flex justify-center">
+        {visibleCount < doctors.length ? (
+          <button onClick={handleLoadMore} className="btn  my-8 btn-primary">
             View All Doctors
           </button>
-        </div>
-      ) : (
-        <div className="flex justify-center mt-4">
-          <button onClick={handleLess} className="btn btn-primary">
+        ) : (
+          <button onClick={handleLess} className="btn my-8 btn-primary">
             Less Doctors
           </button>
-        </div>
-      )}
-    </div>
+        )}
+      </div>
+    </>
   );
 };
 

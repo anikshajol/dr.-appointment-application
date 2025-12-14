@@ -47,7 +47,7 @@ const Footer = () => {
     </>
   );
   return (
-    <footer className="footer footer-horizontal footer-center  p-10">
+    <footer className="footer footer-horizontal footer-center mt-9 p-10">
       <aside>
         <Link to={"/"} className="text-xl flex items-center gap-3">
           <span>

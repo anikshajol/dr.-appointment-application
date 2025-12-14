@@ -5,9 +5,8 @@ import Home from "../Components/Home";
 import MyBookings from "../Pages/MyBookings";
 import ErrorPage from "../Pages/ErrorPage";
 import { Suspense } from "react";
-import Doctors from "../Components/Doctors";
+
 import Loader from "../Components/Loader";
-import AllDoctors from "../Components/AllDoctors";
 
 const fetchDoctorsData = async () => {
   const res = await fetch("/data.json");

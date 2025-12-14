@@ -3,6 +3,7 @@ import Nav from "./Nav";
 import Banner from "./Banner";
 import Doctors from "./Doctors";
 import { Outlet } from "react-router";
+import Stats from "./Stats";
 
 const Home = ({ doctorsDataPromise }) => {
   const doctors = use(doctorsDataPromise);
@@ -11,6 +12,7 @@ const Home = ({ doctorsDataPromise }) => {
     <>
       <Banner />
       <Doctors doctors={doctors} />
+      <Stats />
       <Outlet />
     </>
   );
