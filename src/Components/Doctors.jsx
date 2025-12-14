@@ -1,8 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
 import Doctor from "./Doctor";
 
 const Doctors = ({ doctors }) => {
   //   console.log(doctors);
+  const [visibleCount, setVisibleCount] = useState(6);
+  const handleLoadMore = () => {
+    setVisibleCount((prev) => prev + 3);
+    // setVisibleCount(doctors.length);
+  };
+  const handleLess = () => {
+    setVisibleCount((prev) => prev - 6);
+  };
 
   return (
     <div>
@@ -19,13 +27,23 @@ const Doctors = ({ doctors }) => {
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 px-4 md:px-10 lg:px-28">
-        {doctors.slice(0, 6).map((doctor) => (
+        {doctors.slice(0, visibleCount).map((doctor) => (
           <Doctor key={doctor.id} doctor={doctor} />
         ))}
       </div>
-      <div className="flex justify-center mt-4">
-        <button className="btn btn-primary">View All Doctors</button>
-      </div>
+      {visibleCount < doctors.length ? (
+        <div className="flex justify-center mt-4">
+          <button onClick={handleLoadMore} className="btn btn-primary">
+            View All Doctors
+          </button>
+        </div>
+      ) : (
+        <div className="flex justify-center mt-4">
+          <button onClick={handleLess} className="btn btn-primary">
+            Less Doctors
+          </button>
+        </div>
+      )}
     </div>
   );
 };

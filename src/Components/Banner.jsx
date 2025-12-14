@@ -4,7 +4,7 @@ import banner2 from "../assets/banner-img-1.png";
 const Banner = () => {
   return (
     <section className="dark:bg-black px-6 mt-3 pb-6 dark:text-gray-800 ">
-      <div className="container bg-linear-to-t from-white via-base-200 to-base-200 mx-auto flex flex-col border-2 shadow-sm  border-white rounded-3xl items-center px-4 py-16 text-center md:pb-32 md:pt-20 md:px-10 lg:px-32">
+      <div className="container bg-linear-to-t from-white via-base-300 to-base-300 mx-auto flex flex-col border-2 shadow-sm  border-white rounded-3xl items-center px-4 py-16 text-center md:pb-32 md:pt-20 md:px-10 lg:px-32">
         <h1 className="text-4xl font-bold leading-none sm:text-5xl">
           Dependable Care, Backed by Trusted Professionals.
         </h1>
