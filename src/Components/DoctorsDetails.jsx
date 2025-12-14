@@ -1,7 +1,8 @@
 import React from "react";
 import { IoIosClock } from "react-icons/io";
 import { RiRegisteredLine } from "react-icons/ri";
-import { useLoaderData, useParams } from "react-router";
+import { useLoaderData, useNavigate, useParams } from "react-router";
+import { addToLocalStorage } from "../Utilities/localstorage";
 
 const DoctorsDetails = () => {
   const details = useLoaderData();
@@ -30,6 +31,15 @@ const DoctorsDetails = () => {
   const isAvailableToday = availability
     .map((day) => day.toLowerCase())
     .includes(today);
+
+  const navigate = useNavigate();
+
+  const handleBookingAppointment = (id) => {
+    const isNewBooking = addToLocalStorage(id);
+    if (isNewBooking) {
+      navigate("bookings");
+    }
+  };
 
   return (
     <div className="px-24 py-8 ">
@@ -118,7 +128,10 @@ const DoctorsDetails = () => {
             </span>
           </button>
           {/* booking button */}
-          <button className="btn btn-primary rounded-3xl">
+          <button
+            onClick={() => handleBookingAppointment(id)}
+            className="btn btn-primary rounded-3xl"
+          >
             Book Appointment Now
           </button>
         </div>
