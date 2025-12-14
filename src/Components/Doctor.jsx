@@ -1,6 +1,7 @@
 import React from "react";
 import drImage from "../assets/doctor-sample.png";
 import { RiRegisteredLine } from "react-icons/ri";
+import { Link } from "react-router";
 
 const Doctor = ({ doctor }) => {
   console.log(doctor);
@@ -67,7 +68,9 @@ const Doctor = ({ doctor }) => {
             <p className="ml-2">Reg No: {registration}</p>
           </span>
         </div>
-        <button className="btn text-primary rounded-3xl">View Details</button>
+        <Link to={`doctors/${id}`} className="btn text-primary rounded-3xl">
+          View Details
+        </Link>
       </div>
     </div>
   );

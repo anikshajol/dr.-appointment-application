@@ -7,6 +7,7 @@ import ErrorPage from "../Pages/ErrorPage";
 import { Suspense } from "react";
 
 import Loader from "../Components/Loader";
+import DoctorsDetails from "../Components/DoctorsDetails";
 
 const fetchDoctorsData = async () => {
   const res = await fetch("/data.json");
@@ -27,6 +28,11 @@ export const router = createBrowserRouter([
             <Home doctorsDataPromise={doctorsDataPromise} />
           </Suspense>
         ),
+      },
+      {
+        path: `doctors/:id`,
+        Component: DoctorsDetails,
+        loader: () => fetch(`/data.json`),
       },
 
       { path: "bookings", Component: MyBookings },
