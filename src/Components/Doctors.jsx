@@ -1,19 +1,27 @@
 import React, { useState } from "react";
 import Doctor from "./Doctor";
-import { useNavigation } from "react-router";
 
 const Doctors = ({ doctors }) => {
   //   console.log(doctors);
+  const [loading, setLoading] = useState(false);
   const [visibleCount, setVisibleCount] = useState(6);
+
   const handleLoadMore = () => {
-    setVisibleCount((prev) => prev + 3);
+    setLoading(true);
+
     // setVisibleCount(doctors.length);
+    setTimeout(() => {
+      setVisibleCount((prev) => prev + 3);
+      setLoading(false);
+    }, 500);
   };
   const handleLess = () => {
-    setVisibleCount((prev) => prev - 6);
+    setLoading(true);
+    setTimeout(() => {
+      setVisibleCount((prev) => prev - 6);
+      setLoading(false);
+    }, 500);
   };
-  const navigation = useNavigation();
-  const isNavigating = Boolean(navigation.location);
 
   return (
     <>
@@ -36,20 +44,26 @@ const Doctors = ({ doctors }) => {
       </div>
       <div className="flex justify-center">
         {visibleCount < doctors.length ? (
-          <button onClick={handleLoadMore} className="btn  my-8 btn-primary">
-            {isNavigating ? (
-              <span className="loading loading-spinner text-primary"></span>
-            ) : (
-              <span>View All Doctors</span>
+          <button
+            // disabled={loading}
+            onClick={handleLoadMore}
+            className="btn  my-8 btn-primary"
+          >
+            {loading && (
+              <span className="loading loading-spinner loading-sm"></span>
             )}
+            <span>View All Doctors</span>
           </button>
         ) : (
-          <button onClick={handleLess} className="btn my-8 btn-primary">
-            {isNavigating ? (
-              <span className="loading loading-spinner text-primary"></span>
-            ) : (
-              <span>Less Doctors</span>
+          <button
+            // disabled={loading}
+            onClick={handleLess}
+            className="btn my-8 btn-primary"
+          >
+            {loading && (
+              <span className="loading loading-spinner loading-sm"></span>
             )}
+            <span> Less Doctors</span>
           </button>
         )}
       </div>
