@@ -88,7 +88,7 @@ const Nav = () => {
         <ul className="menu menu-horizontal px-1">{nav}</ul>
       </div>
       <div className="navbar-end">
-        <a className="btn btn-primary rounded-3xl">Emergency</a>
+        <a className="btn btn-primary rounded-3xl hidden md:block">Emergency</a>
         <div onClick={handleAddToTheme} className="cursor-pointer ml-4">
           {theme === "synthwave" ? (
             <FaToggleOn size={34} />

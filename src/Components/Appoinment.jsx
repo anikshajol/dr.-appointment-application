@@ -2,9 +2,9 @@ import React from "react";
 
 const Appoinment = ({ booking, handleCancelBooking }) => {
   return (
-    <section className="card bg-base-100 card-sm shadow-sm">
+    <section className=" w-full rounded-3xl bg-base-100 card-sm shadow-sm">
       <div className="card-body">
-        <div className="flex justify-between">
+        <div className="flex flex-col md:flex-row justify-between">
           <div>
             <h2 className="card-title">{booking?.name}</h2>
             <p>

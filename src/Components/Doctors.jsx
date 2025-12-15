@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Doctor from "./Doctor";
+import { useNavigation } from "react-router";
 
 const Doctors = ({ doctors }) => {
   //   console.log(doctors);
@@ -11,6 +12,8 @@ const Doctors = ({ doctors }) => {
   const handleLess = () => {
     setVisibleCount((prev) => prev - 6);
   };
+  const navigation = useNavigation();
+  const isNavigating = Boolean(navigation.location);
 
   return (
     <>
@@ -34,11 +37,19 @@ const Doctors = ({ doctors }) => {
       <div className="flex justify-center">
         {visibleCount < doctors.length ? (
           <button onClick={handleLoadMore} className="btn  my-8 btn-primary">
-            View All Doctors
+            {isNavigating ? (
+              <span className="loading loading-spinner text-primary"></span>
+            ) : (
+              <span>View All Doctors</span>
+            )}
           </button>
         ) : (
           <button onClick={handleLess} className="btn my-8 btn-primary">
-            Less Doctors
+            {isNavigating ? (
+              <span className="loading loading-spinner text-primary"></span>
+            ) : (
+              <span>Less Doctors</span>
+            )}
           </button>
         )}
       </div>

@@ -84,7 +84,7 @@ const MyBookings = () => {
             </Bar>
           </BarChart>
           {/* appointment list */}
-          <section className="grid grid-cols-1 gap-4 px-34 mt-10">
+          <section className="grid grid-cols-1 gap-4 px-8 md:px-34 mt-10">
             {appointment.map((booking) => (
               <Appoinment
                 key={booking.id}

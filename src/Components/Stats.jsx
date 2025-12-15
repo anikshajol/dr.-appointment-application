@@ -19,7 +19,7 @@ const Stats = () => {
       </div>
 
       {/* card */}
-      <div className="flex justify-center items-center gap-10 px-32">
+      <div className="flex flex-col md:flex-row justify-center items-center gap-10 px-32">
         {/* card -1 */}
         <div className="card bg-base-100 h-44 w-44 card-md shadow-sm">
           <div className="card-body">

@@ -12,7 +12,7 @@ const Blogs = () => {
   return (
     <>
       {isNavigating && <Loader />}
-      <div className="px-34 pb-8">
+      <div className="md:px-34 px-4 pb-8">
         <h2 className="text-5xl text-center font-bold mt-14">Blogs</h2>
         <p className="text-center text-gray-500 py-6">
           Let's explore some basic concept that will make you a good developer
