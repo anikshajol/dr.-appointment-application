@@ -45,7 +45,7 @@ const Nav = () => {
           className={({ isActive }) =>
             isActive ? "md:border-b-2 rounded-b-none border-black" : ""
           }
-          to={"contact-us"}
+          to={"contact"}
         >
           Contact Us
         </NavLink>

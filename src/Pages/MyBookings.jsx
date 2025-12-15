@@ -32,9 +32,9 @@ const MyBookings = () => {
   useEffect(() => {
     const stored = getFromLocalStorage();
     const bookings = doctors.filter((doctor) => stored.includes(doctor.id));
-
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setAppointment(bookings);
-  }, []);
+  }, [doctors]);
   // console.log(appointment);
   // cancel booking
   const handleCancelBooking = (id) => {

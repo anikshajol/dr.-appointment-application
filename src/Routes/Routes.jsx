@@ -8,6 +8,8 @@ import { Suspense } from "react";
 
 import Loader from "../Components/Loader";
 import DoctorsDetails from "../Components/DoctorsDetails";
+import Blogs from "../Pages/Blogs";
+import ContactUs from "../Pages/ContactUs";
 
 const fetchDoctorsData = async () => {
   const res = await fetch("/data.json");
@@ -44,6 +46,15 @@ export const router = createBrowserRouter([
         path: "bookings",
         Component: MyBookings,
         loader: () => fetch("/data.json"),
+      },
+      {
+        path: "blogs",
+        Component: Blogs,
+        loader: () => fetch("/blogs.json"),
+      },
+      {
+        path: "contact",
+        Component: ContactUs,
       },
     ],
   },

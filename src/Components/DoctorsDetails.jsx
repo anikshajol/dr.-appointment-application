@@ -26,6 +26,7 @@ const DoctorsDetails = () => {
   const today = new Date()
     .toLocaleDateString("en-US", { weekday: "long" })
     .toLowerCase();
+
   const isAvailableToday = availability
     .map((day) => day.toLowerCase())
     .includes(today);
@@ -126,12 +127,22 @@ const DoctorsDetails = () => {
             </span>
           </button>
           {/* booking button */}
-          <button
-            onClick={() => handleBookingAppointment(id)}
-            className="btn btn-primary rounded-3xl"
-          >
-            Book Appointment Now
-          </button>
+          {isAvailableToday ? (
+            <button
+              onClick={() => handleBookingAppointment(id)}
+              className="btn btn-primary rounded-3xl"
+            >
+              Book Appointment Now
+            </button>
+          ) : (
+            <button
+              onClick={() => handleBookingAppointment(id)}
+              className="btn btn-error rounded-3xl"
+              disabled
+            >
+              Not Available
+            </button>
+          )}
         </div>
       </div>
     </div>

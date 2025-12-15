@@ -33,7 +33,7 @@ const deleteFromLocalStorage = (id) => {
 
   const remaining = storedItems.filter((item) => item !== id);
   saveToLocalStorage(remaining);
-  toast.error("Booking Cancel.");
+  toast.error("Booking Cancel");
 };
 
 export { getFromLocalStorage, addToLocalStorage, deleteFromLocalStorage };

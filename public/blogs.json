@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "title": "What is useState in React?",
+    "content": "useState is a built-in React Hook that allows functional components to store and update state. It returns an array with two values: the current state and a function to update it. When the state changes, React re-renders the component to reflect the updated UI. It is commonly used for form inputs, toggles, counters, and dynamic UI updates."
+  },
+  {
+    "id": 2,
+    "title": "What is the purpose of useEffect in React?",
+    "content": "useEffect is a React Hook used to perform side effects in functional components. Side effects include data fetching, updating the DOM, setting up subscriptions, and timers. It runs after the component renders and can be controlled using a dependency array to decide when the effect should re-run."
+  },
+  {
+    "id": 3,
+    "title": "What is a custom hook in React and when should you use one?",
+    "content": "A custom hook is a JavaScript function that starts with the word 'use' and allows you to reuse stateful logic across multiple components. You should use a custom hook when the same logic is repeated in different components, such as fetching data, managing localStorage, or handling form inputs."
+  },
+  {
+    "id": 4,
+    "title": "Controlled vs Uncontrolled Components in React",
+    "content": "Controlled components are form elements whose values are managed by React state using useState. Uncontrolled components rely on the DOM to manage form data using refs. Controlled components provide better control, validation, and predictable behavior, making them the preferred choice in most React applications."
+  },
+  {
+    "id": 5,
+    "title": "Which is better: Controlled or Uncontrolled Components?",
+    "content": "Controlled components are generally better for complex forms because they allow real-time validation, dynamic updates, and easier debugging. Uncontrolled components may be useful for simple forms or performance-sensitive cases, but controlled components are recommended for most production-level applications."
+  },
+  {
+    "id": 6,
+    "title": "What is useFormStatus() in React?",
+    "content": "useFormStatus is a React Hook introduced with React Server Components that provides information about the current status of a form submission. It helps developers handle loading states, disable submit buttons during submission, and improve user experience by reacting to form submission status without additional state management."
+  }
+]
