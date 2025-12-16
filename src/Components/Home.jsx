@@ -1,4 +1,4 @@
-import React, { use } from "react";
+import React, { use, useState } from "react";
 import Nav from "./Nav";
 import Banner from "./Banner";
 import Doctors from "./Doctors";
@@ -11,14 +11,14 @@ const Home = ({ doctorsDataPromise }) => {
   // console.log(doctors);
   const navigation = useNavigation();
   const isNavigating = Boolean(navigation.location);
-
+  const [search, setSearch] = useState("");
   return (
     <>
       <Helmet>
         <title>Home</title>
       </Helmet>
-      <Banner />
-      <Doctors doctors={doctors} />
+      <Banner search={search} setSearch={setSearch} />
+      <Doctors search={search} doctors={doctors} />
       <Stats />
       {isNavigating && <Loader />}
       <Outlet />

@@ -1,11 +1,7 @@
 import React from "react";
 import banner from "../assets/banner-img-1.png";
 import banner2 from "../assets/banner-img-1.png";
-const Banner = () => {
-  const handleSearch = () => {
-    console.log("search");
-  };
-
+const Banner = ({ search, setSearch }) => {
   return (
     <section className="dark:bg-black px-6 mt-3 pb-6 dark:text-gray-800 ">
       <div className="container bg-linear-to-t from-white via-base-300 to-base-300 mx-auto flex flex-col border-2 shadow-sm  border-white rounded-3xl items-center px-4 py-16 text-center md:pb-32 md:pt-20 md:px-10 lg:px-32">
@@ -24,11 +20,11 @@ const Banner = () => {
             type="text"
             placeholder="Search Any Doctor"
             className="input input-md w-80 rounded-3xl"
+            value={search}
+            onChange={(e) => setSearch(e.target.value)}
           />
 
-          <a onClick={handleSearch} className="btn btn-primary rounded-3xl">
-            Search Now
-          </a>
+          <a className="btn btn-primary rounded-3xl">Search Now</a>
         </div>
         {/* banner image */}
         <section className="flex gap-4 flex-col lg:flex-row justify-center">

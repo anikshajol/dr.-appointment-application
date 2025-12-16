@@ -1,10 +1,15 @@
 import React, { useState } from "react";
 import Doctor from "./Doctor";
 
-const Doctors = ({ doctors }) => {
+const Doctors = ({ doctors, search }) => {
   //   console.log(doctors);
   const [loading, setLoading] = useState(false);
   const [visibleCount, setVisibleCount] = useState(6);
+  const doctorsSearch = doctors.filter(
+    (doctor) =>
+      doctor.name.toLowerCase().includes(search.toLowerCase()) ||
+      doctor.speciality.toLowerCase().includes(search.toLowerCase())
+  );
 
   const handleLoadMore = () => {
     setLoading(true);
@@ -38,7 +43,7 @@ const Doctors = ({ doctors }) => {
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 px-4 md:px-10 lg:px-28">
-        {doctors.slice(0, visibleCount).map((doctor) => (
+        {doctorsSearch.slice(0, visibleCount).map((doctor) => (
           <Doctor key={doctor.id} doctor={doctor} />
         ))}
       </div>
