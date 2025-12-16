@@ -7,6 +7,7 @@ import {
 import { BarChart, Bar, Cell, XAxis, YAxis, CartesianGrid } from "recharts";
 import Appoinment from "../Components/Appoinment";
 import EmptyBooking from "../Components/EmptyBooking";
+import { Helmet } from "react-helmet";
 
 const colors = ["#0088FE", "#00C49F", "#FFBB28", "#FF8042", "red", "pink"];
 
@@ -46,6 +47,9 @@ const MyBookings = () => {
   };
   return (
     <div>
+      <Helmet>
+        <title>Bookings</title>
+      </Helmet>
       {/* chart */}
       {appointment.length === 0 ? (
         <EmptyBooking />

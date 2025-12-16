@@ -3,7 +3,7 @@ import { RiRegisteredLine } from "react-icons/ri";
 import { Link } from "react-router";
 
 const Doctor = ({ doctor }) => {
-  console.log(doctor);
+  // console.log(doctor);
   const { id, name, image, education, experience, registration, availability } =
     doctor;
 

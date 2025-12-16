@@ -5,14 +5,18 @@ import Doctors from "./Doctors";
 import { Outlet, useNavigation } from "react-router";
 import Stats from "./Stats";
 import Loader from "./Loader";
-
+import { Helmet } from "react-helmet";
 const Home = ({ doctorsDataPromise }) => {
   const doctors = use(doctorsDataPromise);
-  console.log(doctors);
+  // console.log(doctors);
   const navigation = useNavigation();
   const isNavigating = Boolean(navigation.location);
+
   return (
     <>
+      <Helmet>
+        <title>Home</title>
+      </Helmet>
       <Banner />
       <Doctors doctors={doctors} />
       <Stats />

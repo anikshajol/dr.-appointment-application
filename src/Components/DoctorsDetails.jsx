@@ -3,6 +3,7 @@ import { IoIosClock } from "react-icons/io";
 import { RiRegisteredLine } from "react-icons/ri";
 import { useLoaderData, useNavigate, useParams } from "react-router";
 import { addToLocalStorage } from "../Utilities/localstorage";
+import { Helmet } from "react-helmet";
 
 const DoctorsDetails = () => {
   const details = useLoaderData();
@@ -41,7 +42,10 @@ const DoctorsDetails = () => {
   };
 
   return (
-    <div className="px-24 py-8 ">
+    <div className="px-4 md:px-24 py-8 ">
+      <Helmet>
+        <title>{name}</title>
+      </Helmet>
       <div className="card bg-base-100 card-sm shadow-sm pb-4">
         <div className="card-body text-center">
           <h2 className="text-3xl font-semibold text-center">

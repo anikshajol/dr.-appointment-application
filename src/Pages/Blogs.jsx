@@ -2,6 +2,7 @@ import React from "react";
 import { useLoaderData, useNavigation } from "react-router";
 import Loader from "../Components/Loader";
 import Blog from "../Components/Blog";
+import { Helmet } from "react-helmet";
 
 const Blogs = () => {
   const navigation = useNavigation();
@@ -11,6 +12,9 @@ const Blogs = () => {
 
   return (
     <>
+      <Helmet>
+        <title>Blogs</title>
+      </Helmet>
       {isNavigating && <Loader />}
       <div className="md:px-34 px-4 pb-8">
         <h2 className="text-5xl text-center font-bold mt-14">Blogs</h2>
